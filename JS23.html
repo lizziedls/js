@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-6" http-equiv="encoding">
+
+    <title>Headcanon generator.</title>
+
+    <style type="text/css">
+              p{
+         color: #000000;
+         color: rgb(0, 0, 0);
+         font-size: 30px;
+       font-weight: 400;
+       font-style: normal;
+       text-align: center;
+       padding: 16px 24px;
+     }
+ html{
+      height: 100%;
+      margin-left: 500px;
+  }
+  div{
+      width: 40%;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  margin-top: 100px;
+  font-size: 25px;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 60px;
+
+  justify-content: center;
+  
+  border-radius: 20px;
+  }
+  input {
+width: 100%;
+padding: 10px 0;
+font-size: 16px;
+color: #000000;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid #000000;
+outline: none;
+background: transparent;}
+body{
+  background: rgb(0, 0, 0);
+}
+
+.btn {
+appearance: none;
+background-color: black;
+border-radius: 15px;
+box-sizing: border-box;
+color: #ffffff;
+cursor: pointer;
+display: inline-block;
+font-size: 16px;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+min-height: 60px;
+min-width: 0;
+outline: none;
+padding: 16px 24px;
+text-align: center;
+text-decoration: none;
+transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+margin-top: 10px;
+margin-left: 100px;
+will-change: transform;
+}
+
+.btn:disabled {
+pointer-events: none;
+}
+
+.btn:hover {
+color: #000000;
+background-color: #ffffff;
+box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+transform: translateY(-2px);
+}
+
+.btn:active {
+box-shadow: none;
+transform: translateY(0);
+}
+ .main {
+            width: 400px;
+            margin: auto;
+        }
+        .person1 {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #000000;
+            margin: 200px 0px 0px 0px;
+            width: 100px;
+            padding: 5px;
+            background: #ffffff;
+            font-family: arial;
+            font-size: 12px;
+            color: #000000;
+            line-height: 14px;
+            font-style: oblique;
+            text-align: center;
+        }
+        .shitbox {
+            position: absolute;
+            border-radius: 25px;
+            border: 2px solid #D6D6D6;
+            padding: 20px;
+            background: #ffffff;
+            width: 390px;
+        }
+        .thanks {
+            font-style: oblique;
+            float: right;
+            font-size: 12px;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        var prompts = [
+            "{A} likes to eat fast food at night.",
+            "{A} loves tea with a hammer.",
+            "{A} can't stand expresso.",
+            "{A} wants to switch to a vegetarian diet.",
+            "{A} a gay.",
+            "{A} a lesbian.",
+            "{A} frequent bouts of hyperactivity.",
+            "{A} chat on discord.",
+            "{A} the old woman who tweets on Twitter.",
+            "{A} watched MLP as a child.",
+            "{A} hates romantic movies.",
+            "{A} sigma.",
+            "{A} panromantic.",
+            "{A} bisexual.",
+            "{A} heterosexual.",
+            "{A} LGBT activist.",
+            "{A} creative person.",
+            "{A} walking wikipedia.",
+            "{A} nerd.",
+            "{A} has witty humor.",
+            "{A} jokes about skibidi toilet.",
+            "{A} jokes about how turtles reproduce.",
+            "{A} likes older women.",
+            "{A} a woman who flirts with younger girls.",
+            "{A} pretends to be dumb, but he understands everything.",
+            "{A} sits in tik tok 25/8.",
+            "{A} has dirty humor.",
+            "{A} taking mephedrone.",
+            "{A} likes to gossip.",
+            "If the sorce media was a musical, {A} would be the one character that asks why everyone is singing.",
+            "{A}'s favourite subject in school was English. ",
+            "{A} almost drank the lethal dosage of caffine once.",
+            "{A} chews their nails when nervous.",
+            "{A} has chronic nightmares.",
+            "If there's a math class on fire, {A} gonna make a video.",
+            "{A} makes your mom jokes.",
+            "{A} has a sword under their bed.",
+            "{A} wears Hello Kitty socks.",
+            "{A} likes to eat straight coffee beans.",
+            "{A} is in your house.",
+            "{A} sings in the shower.",
+            "{A} is smart but also very stupid.",
+            "{A} wakes up on November 1st and starts decorating for Christmas.",
+            "{A} likes to sing at 4 in the morning. Their neighbors hate them.",
+            "{A} has been to prison.",
+            "{A} killed Princess Diana.",
+            "{A}'s least favourite subject in school was Gym.",
+            "{A} is very good at using chopsticks.",
+            "{A} drinks revo every day.",
+            "{A} always has a knife on them.",
+            "{A} speaks only in meme refrences.",
+            "{A} is constantly singing for no reason.",
+            "{A} gets ready for christmas way to early.",
+            "{A} can't sit in a chair properly.",
+            "{A} is an oldest child.",
+            "{A} is oblivous to any and all romantic interest someone may show them.",
+            "{A} cannot drive.",
+            "{A} is afraid of doing anything without other peoples permission.",
+            "{A} has fallen asleep at their desk while working in the middle of the night.",
+            "{A} does not know how to read.",
+            "{A} has an intense fear of heights.",
+            "{A} is awful with kids.",
+            "{A} is a horrible liar.",
+            "{A} has punched a hole in their wall.",
+            "{A}'s listening to Egor Creed.",
+            "{A} has a black humor.",
+            "{A} doesn't wipe after going to the bathroom.",
+            "{A}'s the soul of the company.",
+            "{A} is a genius.",
+            "{A} hates algebra and geometry.",
+            "{A}'s a music lover.",
+            "{A} loves horror movies.",
+            "One day {A} peed herself while watching a horror movie.",
+            "{A} has 20 kids in her basement.",
+            "{A} loves broccoli, but hides it.",
+            "{A} hasn't changed her underwear in three days.",
+            "{A} is the humorist in chief.",
+            "{A}'s a truant who skips class.",
+            "{A} the clown.",
+            "{A}'s a frozen corpse.",
+            "{A}'s gonna have a cookie fight.",
+            "{A}'s a hot chick.",
+            "{A} is a villainous Brit",
+            "{A} is a misunderstood genius.",
+            "{A} wants to kill her foreign literature teacher.",
+            "{A} loves java script.",
+            "{A} is the president of Crimea. ",
+        ]
+
+    function clear1() {
+        document.getElementById("person1").value = "";
+        document.getElementById("person1").style.fontStyle = "normal";
+    }
+
+     function fluff() {
+        // Get names of OTP
+        var A = document.getElementById("person1").value;
+        // Get random prompt
+        var R1 = Math.floor(Math.random() * prompts.length);
+        var str = prompts[R1] 
+        // Replace {A} & {B} in prompt with OTP names
+        var result = str.replace(/{A}/g, A);
+
+        document.getElementById("premise").innerHTML = result;
+    }
+    </script>
+</head>
+<body>
+    <div id="shitbox">
+        <center><h1><b>Recognize your secret headcanons.</b></h1></center>
+        <input type="text" name="otp1" value="Enter a name" id="person1" onfocus="clear1()">
+            
+            <button class="btn" onclick="fluff()">Create Headcanon</button>
+            <center><p><b>Your headcanon:</b></p></center>
+            <center><b><span id="premise"></span></b></center></div>
+</body>
+</html>

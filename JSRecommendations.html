@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations.</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Paytone+One&family=Titan+One&display=swap');
+       html{
+         height: 90%;
+     }
+    p{
+       color: #000000;
+       font-size: 22px;
+    }
+   body{
+     background: rgb(255, 255, 255);
+     height: 100%;
+   }
+   .btn {
+   appearance: none;
+   background-color: black;
+   border-radius: 15px;
+   box-sizing: border-box;
+   color: #ffffff;
+   cursor: pointer;
+   display: inline-block;
+   font-size: 18px;
+   font-weight: 600;
+   line-height: normal;
+   min-height: 60px;
+   min-width: 200px;
+   outline: none;
+   padding: 16px 24px;
+   text-align: center;
+   text-decoration: none;
+   transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+  margin-inline-start: 20px;
+   will-change: transform;
+   font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     margin-top: 0px;
+     margin-left: 170px;
+   }
+   
+   .btn:disabled {
+   pointer-events: none;
+   font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+   
+   .btn:hover {
+   color: #000000;
+   background-color: #ffffff;
+   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+   transform: translateY(-2px);
+   font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+   
+   .btn:active {
+   box-shadow: none;
+   transform: translateY(0);
+   font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+       header{
+               background-color: rgb(255, 255, 255);
+   }
+   h1{
+       font-size: 50px;
+       text-align: center;
+       font-family: 'Noto Serif KR', serif;
+       margin: 0;
+       font-family: "Titan One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+   nav, aside{
+      width: 900px;
+       justify-content: center;
+       background-color: rgb(255, 255, 255);
+      margin: 0px;
+      margin-top: 0px;
+      margin-left: 300px;
+       float: left;
+     font-size: 15px;
+   }
+   h2{
+    
+       font-family: 'Noto Serif KR', serif;
+       color: rgb(0, 0, 0);
+       font-size: 30px;
+       font-family: "Titan One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+  
+   }
+   h4{
+       text-align: center;
+       font-family: 'Noto Serif KR', serif;
+       color: rgb(0, 0, 0);
+       font-size: 30px;
+       font-family: "Titan One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     padding: 16px 24px;
+   }
+   h3{
+       text-align: center;
+       font-family: 'Noto Serif KR', serif;
+       color: rgb(0, 0, 0);
+       font-size: 0px;
+       font-family: "Titan One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     
+   }
+   main{
+       width: 100%;
+       height: 100%;
+     background-color: rgb(255, 255, 255);
+       float: left;
+   }
+   footer{
+       height: 100px;
+       background-color: white;
+       clear: both;
+     text-align: center;
+     margin-right: 30px;
+   }
+   iframe{
+    margin: auto;
+    display: block;
+   }
+   audio{
+    margin-left: 300px;
+   }
+   figcaption{
+       font-size: 24px;
+       color: rgb(0, 0, 0);
+       font-weight: 600;
+       font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     text-align: center;
+     font-style: normal;
+   }
+   p{
+     font-family: "Paytone One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+   
+   .bgvideo{
+       width: 100%;
+       height: 100%;
+       position: relative;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   .bgvideo video{
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       object-fit: cover;
+       z-index: 1;
+   }
+   .textvideo{
+       color: rgb(0, 0, 0);
+       z-index: 2;
+       font-family: "Titan One", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+   }
+   a, a:hover {
+     text-decoration: none;
+   }
+   .socialbtns, .socialbtns ul, .socialbtns li {
+     margin: 0;
+     padding: 5px;
+   }
+   .socialbtns li {
+       list-style: none outside none;
+       display: inline-block;
+   }
+   .socialbtns .fa {
+     width: 40px;
+       height: 28px;
+     color: #000;
+     background-color: #FFF;
+     border: 1px solid #000;
+     padding-top: 12px;
+     border-radius: 22px;
+     -moz-border-radius: 22px;
+     -webkit-border-radius: 22px;
+     -o-border-radius: 22px;
+   }
+   .socialbtns .fa:hover {
+     color: #ffffff;
+     background-color: #000000;
+     border: 1px solid #000;
+   }
+   .c2{
+         margin: 279px;
+          box-shadow: black 2px 2px 20px;
+     }
+     </style>
+</head>
+<body>
+  <header><h1 class="textvideo">My recommendations for movies, music, etc.</h1></header>
+
+
+		<h1>Navigation:</h1>
+    <nav>
+		<a href="#Films." target="blank" class="btn">Films.</a>
+		<a href="#Music." target="blank" class="btn">Music.</a>
+	<div id="content">
+  </nav>
+
+		<main><div id="Films.">
+			<h4>Films.</h4>
+			<div>
+        <nav>
+				<h2>Terrifier.</h2>
+				<a href="https://kinogo.uk/847-uzhasajuschij-2016.html" target="blank"><img src="https://images.kinorium.com/movie/poster/1512964/h280_52029902.jpg" width="250px" height="380px" ></a>
+	<p>Year of release: 2016.<br>Genre: Horror/Criminal.</p>
+				<p>On Halloween night, a maniacal clown terrorizes three girls, as well as anyone else who gets in his way.</p></nav>
+			</div>
+			<div>
+        <nav>
+				<h2>Sinister.</h2>
+				<a href="https://kinogo.inc/films/7217-sinister-film-hd-mvisionstv6-hder5-v74.html" target="blank"><img src="https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_.jpg" width="250px" height="380px" ></a>
+				<p>Year of release: 2012.<br>Genre: Horror/Detective.</p>
+				<p>Together with his family, the author of detectives settles in a small town, in the house, where almost a year ago unfolded a chilling tragedy - all the tenants were killed. The writer accidentally finds video footage, which is the key to the mystery of the crime. But nothing is given in vain: in the house begin to happen terrible things and now the lives of his loved ones are at risk. They are faced with something from which there is no escape....</p></nav>
+			</div>
+		</div>
+    <nav>
+        <h2>Curse.</h2>
+      <a href="https://kinogo.biz/18611-prokljatie.html" target="blank"><img src="data:image/jpeg;base64,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" width="250px" height="380px"></a>
+      <p>Year of release: 2002.<br>Genre: Horror/Detective.</p>
+      <p>Many years ago, tragedy struck this house: A man killed his wife, and the fate of their six-year-old son Toshio is unknown, the boy disappeared. Dying, the unhappy woman cursed the murderer and the place where she met her death. Now a fierce ghost brings death to all who dare to approach his domain.</p></nav>
+    </div>
+  </div>
+  <nav>
+      <h2>Insidious.</h2>
+     <a href="https://kinogo.film/films/3456-astral.html" target="blank"><img src="https://m.media-amazon.com/images/M/MV5BMTYyOTAxMDA0OF5BMl5BanBnXkFtZTcwNzgwNTc1NA@@._V1_.jpg" width="250px" height="380px"></a>
+    <p>Year of release: 2010.<br>Genre: Horror/Detective.</p>
+    <p>Josh and Renee move into a new home with their children, but no sooner have they unpacked than strange events begin. Inexplicably moving objects, strange sounds in the nursery, but the real nightmare begins when their ten-year-old son Dalton falls into a coma. All the doctors' efforts to help the boy are unsuccessful.</p></nav>
+   </div>
+  </div>
+
+   <nav><h2>Hereditary.</h2>
+  <a href="https://kinogo.inc/films/2138-reinkarnaciya-film-hdtv-v15.html" target="blank"><img src="https://www.film.ru/sites/default/files/styles/thumb_260x400/public/movies/posters/36167832-1027343.jpg" width="250px" height="380px"></a>
+ <p>Year of release: 2018.<br>Genre: Horror/Detective.</p>
+ <p>After the death of Annie Graham's mother, something inexplicable begins to happen in her previously peaceful home. Now the lives of her loved ones are at risk. With each passing day, more of their family's horrifying secrets are revealed.</p></nav>
+</div>
+</div>
+
+  <main><div id="Music.">
+
+    <h4>Music.</h4>
+
+<nav><figcaption>Type O Negative - IYDKMIGTHTKY.</figcaption>
+  <h2><audio src="Type O Negative - IYDKMIGTHTKY (Gimme That).mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Mad Father - Old Doll.</figcaption>
+<h2><audio src="mad-father-bluerra-piano-cover--old-doll-456241945_d6de2ba2.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Melanie Martinez - Teacher's Pet.</figcaption>
+  <h2><audio src="Melanie Martinez - Teacher's Pet.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Artemas - If u think i'm pretty.</figcaption>
+  <h2><audio src="Artemas - If u think i'm pretty.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Electrophoresis - After the Movie.</figcaption>
+  <h2><audio src="elektroforez-posle-filma.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>2rbina 2rista - Narcotester.</figcaption>
+  <h2><audio src="2Rbina 2Rista Наркотестер.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Rammstein - Rein Raus.</figcaption>
+  <h2><audio src="Rammstein Rein Raus.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Cult of the Body - Buerak.</figcaption>
+  <h2><audio src="Культ тела - Буерак.m4a" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Tag, You're It - Melanie Martinez.</figcaption>
+  <h2><audio src="Tag, You re It - Мелани Мартинес.m4a" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Sex with a Ghost - Teddy Hyde.</figcaption>
+  <h2><audio src="Sex with a Ghost - Teddy Hyde.m4a" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Everything is decided - Valentin Strykalo.</figcaption>
+  <h2><audio src="Всё решено - Валентин Стрыкало.m4a" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Lie Use Die - M()RE.</figcaption>
+  <h2><audio src="Lie Use Die - M()RE.m4a" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>5mewmet - Multicolored tablets.</figcaption>
+  <h2><audio src="5Mewmet Разноцветные Таблетки.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Mindless Self Indulgence - Faggot.</figcaption>
+  <h2><audio src="Mindless Self Indulgence Faggot.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Mindless Self Indulgence - Get it Up.</figcaption>
+  <h2><audio src="mindless-self-indulgence-get-it-up.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Ashnikko - Stupid.</figcaption>
+  <h2><audio src="Ashnikko Stupid (Feat. Yung Baby Tate).mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Sohodolls - 1724.</figcaption>
+  <h2><audio src="Sohodolls 1724.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Xdinary Heroes - Man In The Box.</figcaption>
+  <h2><audio src="Xdinary Heroes Man In The Box.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Euringer - Problematic.</figcaption>
+  <h2><audio src="Euringer Problematic.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Montell Fish - Bathroom.</figcaption>
+  <h2><audio src="montell-fish-bathroom-mp3.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Måneskin - OFF MY FACE.</figcaption>
+  <h2><audio src="maneskin-off-my-face-mp3.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Mother Mother - Burning Pile.</figcaption>
+  <h2><audio src="Mother Mother Burning Pile.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Mindless Self Indulgence - On It.</figcaption>
+  <h2><audio src="Mindless Self Indulgence On It.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+
+<nav><figcaption>Lana Del Rey - Pretty When You Cry.</figcaption>
+  <h2><audio src="Lana Del Rey Pretty When You Cry.mp3" controls></audio></h2>
+<figcaption>_________________________________________________________</figcaption></nav>
+    </div>
+  </main>
+</body>
+</html>

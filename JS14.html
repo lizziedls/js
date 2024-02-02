@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Circles.</title>
+    <style>
+        canvas{
+            margin-left: 500px;
+        }
+    html{
+        height: 100%;
+    }
+    div{
+        width: 40%;
+     box-shadow: rgba(0, 0, 0, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    margin-top: 100px;
+    font-size: 25px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 60px;
+    justify-content: center;
+    border-radius: 20px;
+    }
+    input {
+width: 100%;
+padding: 10px 0;
+font-size: 16px;
+color: #000000;
+margin-bottom: 30px;
+border: none;
+border-bottom: 1px solid #000000;
+outline: none;
+background: transparent;}
+ body{
+    background: rgb(0, 0, 0);
+ }
+ .btn {
+appearance: none;
+background-color: black;
+border-radius: 15px;
+box-sizing: border-box;
+color: #ffffff;
+cursor: pointer;
+display: inline-block;
+font-size: 16px;
+font-weight: 600;
+line-height: normal;
+margin: 0;
+min-height: 60px;
+min-width: 0;
+outline: none;
+padding: 16px 24px;
+text-align: center;
+text-decoration: none;
+transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+user-select: none;
+-webkit-user-select: none;
+touch-action: manipulation;
+margin-top: 10px ;
+
+will-change: transform;
+}
+
+.btn:disabled {
+pointer-events: none;
+}
+
+.btn:hover {
+color: #000000;
+background-color: #ffffff;
+box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+transform: translateY(-2px);
+}
+
+.btn:active {
+box-shadow: none;
+transform: translateY(0);
+}
+</style>
+</head>
+<body>
+	<canvas id="myCanvas" width="500px" height="500px"></canvas>
+
+	<script type="text/javascript">
+		let canvas = document.getElementById('myCanvas');
+        let cxt = canvas.getContext('2d');
+        let number = +prompt ("How many circles do you want?", "");
+        let max = 30;
+        let min = 20;
+
+        let colors =["black", "White"];
+        let numberColor = colors.length;
+
+        for(let i = 0; i < number; i++){
+        let width = Math.random() * 2000;
+        let height = Math.random() * 1000;
+        let radius = min + (Math.random() * (max-min));
+        let colorIndex = Math.round(Math.random() * (numberColor - 1));
+        let color = colors[colorIndex];
+
+
+        cxt.beginPath();
+        cxt.arc(width, height, radius, Math.PI* 0, Math.PI*2, false);
+        cxt.fillStyle = color;
+        cxt.fill();
+    }
+   
+	</script>
+  </body>
+  </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotions.</title>
+    <style>
+      p{
+      font-size: 60px;
+      text-align: center;
+      color: white;
+      margin: 0;
+      }
+   body{
+      background: rgb(0, 0, 0);
+   }
+    </style>
+</head>
+<body>
+    <script>
+        let min = +prompt("Start smile number is", " ")
+let max = +prompt("Finish smile number is", " ")
+for (let i = min; i <= max; i++){
+document.writeln ("<p> &#"+i+"- &amp;#"+i+";</p>")
+}
+    </script>
+</body>
+</html>
